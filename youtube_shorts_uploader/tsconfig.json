@@ -1,10 +1,16 @@
 {
   "extends": "@revideo/2d/tsconfig.project.json",
-  "include": ["src"],
   "compilerOptions": {
     "noEmit": false,
     "outDir": "dist",
-    "module": "CommonJS",
-    "skipLibCheck": true
-  }
+    "module": "ESNext",
+    "target": "ES2020",
+    "skipLibCheck": true,
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*"]
 }
