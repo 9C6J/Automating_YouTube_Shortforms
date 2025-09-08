@@ -35,4 +35,6 @@ async function createAssets(topic: string, voiceName: string){
 }
 
 // createAssets("The moon landing", "Sarah")
-createAssets("월식 일식에 대한 이야기를 한국어로 부탁해", "Sarah")
+createAssets("월식과 일식에 대한 과학적인 설명", "Sarah") 
+
+// MinJoon , Anna Kim, Bin

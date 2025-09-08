@@ -1,361 +1,358 @@
 {
-  "audioUrl": "f27cfe50-2aee-48c2-83ac-f4a0c9befc52-audio.wav",
+  "audioUrl": "a4cd2d96-31d3-48e1-af70-f5d878205be3-audio.wav",
   "images": [
-    "/f27cfe50-2aee-48c2-83ac-f4a0c9befc52-image-0.png",
-    "/f27cfe50-2aee-48c2-83ac-f4a0c9befc52-image-2.png",
-    "/f27cfe50-2aee-48c2-83ac-f4a0c9befc52-image-3.png",
-    "/f27cfe50-2aee-48c2-83ac-f4a0c9befc52-image-4.png"
+    "/a4cd2d96-31d3-48e1-af70-f5d878205be3-image-0.png"
   ],
   "words": [
     {
       "word": "이거",
       "start": 0.16,
-      "end": 0.65999997,
-      "confidence": 0.9941406,
+      "end": 0.39999998,
+      "confidence": 0.90234375,
       "punctuated_word": "이거"
     },
     {
-      "word": "알고",
-      "start": 1.28,
-      "end": 1.7199999,
+      "word": "정말",
+      "start": 0.39999998,
+      "end": 0.9,
       "confidence": 1,
-      "punctuated_word": "알고"
+      "punctuated_word": "정말"
     },
     {
-      "word": "계셨나요",
-      "start": 1.7199999,
-      "end": 2.1599998,
-      "confidence": 0.49804688,
-      "punctuated_word": "계셨나요?"
-    },
-    {
-      "word": "월식과",
-      "start": 2.1599998,
-      "end": 2.6599998,
-      "confidence": 0.9900716,
-      "punctuated_word": "월식과"
+      "word": "신기해요",
+      "start": 1.1199999,
+      "end": 1.6199999,
+      "confidence": 0.9941406,
+      "punctuated_word": "신기해요"
     },
     {
       "word": "일식은",
-      "start": 2.8799999,
-      "end": 3.3799999,
-      "confidence": 0.9975586,
-      "punctuated_word": "일식은"
-    },
-    {
-      "word": "달과",
-      "start": 3.6799998,
-      "end": 4.18,
-      "confidence": 0.9995117,
-      "punctuated_word": "달과"
-    },
-    {
-      "word": "지구",
-      "start": 4.3199997,
-      "end": 4.8199997,
-      "confidence": 1,
-      "punctuated_word": "지구"
-    },
-    {
-      "word": "태양의",
-      "start": 4.96,
-      "end": 5.46,
-      "confidence": 0.99609375,
-      "punctuated_word": "태양의"
-    },
-    {
-      "word": "위치차이로",
-      "start": 5.52,
-      "end": 6.02,
-      "confidence": 0.8782959,
-      "punctuated_word": "위치차이로"
-    },
-    {
-      "word": "생기는",
-      "start": 6.56,
-      "end": 6.64,
-      "confidence": 1,
-      "punctuated_word": "생기는"
-    },
-    {
-      "word": "천문",
-      "start": 6.64,
-      "end": 7.12,
-      "confidence": 0.99902344,
-      "punctuated_word": "천문"
-    },
-    {
-      "word": "현상입니다",
-      "start": 7.12,
-      "end": 7.62,
-      "confidence": 0.87768555,
-      "punctuated_word": "현상입니다."
-    },
-    {
-      "word": "일식은",
-      "start": 8.4,
-      "end": 8.9,
-      "confidence": 0.9995117,
+      "start": 1.8399999,
+      "end": 2.34,
+      "confidence": 0.97753906,
       "punctuated_word": "일식은"
     },
     {
       "word": "달이",
-      "start": 9.04,
-      "end": 9.44,
-      "confidence": 0.99902344,
+      "start": 2.6399999,
+      "end": 2.96,
+      "confidence": 1,
       "punctuated_word": "달이"
     },
     {
       "word": "태양과",
-      "start": 9.44,
-      "end": 9.94,
+      "start": 2.96,
+      "end": 3.36,
       "confidence": 0.9995117,
       "punctuated_word": "태양과"
     },
     {
       "word": "지구",
-      "start": 10.08,
-      "end": 10.4,
+      "start": 3.36,
+      "end": 3.7199998,
       "confidence": 1,
       "punctuated_word": "지구"
     },
     {
       "word": "사이에",
-      "start": 10.4,
-      "end": 10.8,
-      "confidence": 0.9526367,
+      "start": 3.7199998,
+      "end": 4.08,
+      "confidence": 0.9902344,
       "punctuated_word": "사이에"
     },
     {
-      "word": "있어",
-      "start": 10.8,
-      "end": 11.04,
-      "confidence": 0.99902344,
-      "punctuated_word": "있어"
+      "word": "들어와",
+      "start": 4.08,
+      "end": 4.58,
+      "confidence": 0.99609375,
+      "punctuated_word": "들어와"
     },
     {
-      "word": "태양이",
-      "start": 11.04,
-      "end": 11.5199995,
-      "confidence": 0.9970703,
-      "punctuated_word": "태양이"
+      "word": "태양을",
+      "start": 4.72,
+      "end": 4.96,
+      "confidence": 0.9995117,
+      "punctuated_word": "태양을"
     },
     {
-      "word": "가려지는",
-      "start": 11.5199995,
-      "end": 12.0199995,
-      "confidence": 0.99658203,
-      "punctuated_word": "가려지는"
+      "word": "가릴",
+      "start": 4.96,
+      "end": 5.2,
+      "confidence": 1,
+      "punctuated_word": "가릴"
     },
     {
-      "word": "현상이고",
-      "start": 12.16,
-      "end": 12.66,
-      "confidence": 0.9892578,
-      "punctuated_word": "현상이고"
+      "word": "때",
+      "start": 5.2,
+      "end": 5.52,
+      "confidence": 0.9980469,
+      "punctuated_word": "때"
+    },
+    {
+      "word": "일어나고",
+      "start": 5.52,
+      "end": 6.02,
+      "confidence": 0.9951172,
+      "punctuated_word": "일어나고"
     },
     {
       "word": "월식은",
-      "start": 13.035,
-      "end": 13.535,
-      "confidence": 0.99902344,
+      "start": 6.48,
+      "end": 6.98,
+      "confidence": 0.99853516,
       "punctuated_word": "월식은"
     },
     {
       "word": "지구가",
-      "start": 13.915,
-      "end": 14.415,
+      "start": 7.04,
+      "end": 7.52,
       "confidence": 1,
       "punctuated_word": "지구가"
     },
     {
       "word": "태양과",
-      "start": 14.474999,
-      "end": 14.974999,
-      "confidence": 1,
+      "start": 7.52,
+      "end": 8,
+      "confidence": 0.9995117,
       "punctuated_word": "태양과"
     },
     {
       "word": "달",
-      "start": 15.035,
-      "end": 15.355,
+      "start": 8,
+      "end": 8.16,
       "confidence": 1,
       "punctuated_word": "달"
     },
     {
       "word": "사이에",
-      "start": 15.355,
-      "end": 15.855,
-      "confidence": 0.99609375,
+      "start": 8.16,
+      "end": 8.66,
+      "confidence": 0.9921875,
       "punctuated_word": "사이에"
     },
     {
       "word": "위치해",
-      "start": 16.395,
-      "end": 16.715,
-      "confidence": 0.984375,
+      "start": 8.96,
+      "end": 9.28,
+      "confidence": 0.9873047,
       "punctuated_word": "위치해"
     },
     {
       "word": "달이",
-      "start": 16.715,
-      "end": 17.035,
-      "confidence": 0.99902344,
+      "start": 9.28,
+      "end": 9.76,
+      "confidence": 0.9980469,
       "punctuated_word": "달이"
     },
     {
       "word": "지구",
-      "start": 17.035,
-      "end": 17.355,
+      "start": 9.76,
+      "end": 10,
       "confidence": 1,
       "punctuated_word": "지구"
     },
     {
-      "word": "그림자에",
-      "start": 17.355,
-      "end": 17.855,
-      "confidence": 0.9760742,
-      "punctuated_word": "그림자에"
+      "word": "그림자",
+      "start": 10,
+      "end": 10.48,
+      "confidence": 0.9941406,
+      "punctuated_word": "그림자"
     },
     {
-      "word": "가려지는",
-      "start": 18.154999,
-      "end": 18.475,
+      "word": "안에",
+      "start": 10.48,
+      "end": 10.8,
       "confidence": 0.9980469,
-      "punctuated_word": "가려지는"
+      "punctuated_word": "안에"
+    },
+    {
+      "word": "들어갈",
+      "start": 10.8,
+      "end": 11.04,
+      "confidence": 0.9873047,
+      "punctuated_word": "들어갈"
+    },
+    {
+      "word": "때",
+      "start": 11.04,
+      "end": 11.28,
+      "confidence": 0.9951172,
+      "punctuated_word": "때"
+    },
+    {
+      "word": "발생해요",
+      "start": 11.28,
+      "end": 11.78,
+      "confidence": 0.9499512,
+      "punctuated_word": "발생해요"
+    },
+    {
+      "word": "일직선으로",
+      "start": 12.32,
+      "end": 12.82,
+      "confidence": 0.9995117,
+      "punctuated_word": "일직선으로"
+    },
+    {
+      "word": "배열될",
+      "start": 13.36,
+      "end": 13.84,
+      "confidence": 0.98168945,
+      "punctuated_word": "배열될"
+    },
+    {
+      "word": "때만",
+      "start": 13.84,
+      "end": 14.08,
+      "confidence": 0.96777344,
+      "punctuated_word": "때만"
+    },
+    {
+      "word": "가능하죠",
+      "start": 14.08,
+      "end": 14.58,
+      "confidence": 0.75390625,
+      "punctuated_word": "가능하죠"
+    },
+    {
+      "word": "특히",
+      "start": 15.215,
+      "end": 15.715,
+      "confidence": 0.9980469,
+      "punctuated_word": "특히"
+    },
+    {
+      "word": "월식",
+      "start": 15.875,
+      "end": 16.375,
+      "confidence": 0.99365234,
+      "punctuated_word": "월식"
+    },
+    {
+      "word": "중",
+      "start": 16.535,
+      "end": 17.035,
+      "confidence": 0.94384766,
+      "punctuated_word": "중"
+    },
+    {
+      "word": "개기월식은",
+      "start": 17.195,
+      "end": 17.695,
+      "confidence": 0.9941406,
+      "punctuated_word": "개기월식은"
+    },
+    {
+      "word": "지구",
+      "start": 17.855,
+      "end": 18.095001,
+      "confidence": 1,
+      "punctuated_word": "지구"
+    },
+    {
+      "word": "대기를",
+      "start": 18.095001,
+      "end": 18.595001,
+      "confidence": 0.99658203,
+      "punctuated_word": "대기를"
+    },
+    {
+      "word": "통과한",
+      "start": 18.655,
+      "end": 19.135,
+      "confidence": 0.99609375,
+      "punctuated_word": "통과한"
+    },
+    {
+      "word": "빛",
+      "start": 19.135,
+      "end": 19.455,
+      "confidence": 0.7319336,
+      "punctuated_word": "빛"
+    },
+    {
+      "word": "때문에",
+      "start": 19.455,
+      "end": 19.855,
+      "confidence": 0.94628906,
+      "punctuated_word": "때문에"
+    },
+    {
+      "word": "달이",
+      "start": 19.855,
+      "end": 20.175,
+      "confidence": 0.88183594,
+      "punctuated_word": "달이"
+    },
+    {
+      "word": "붉게",
+      "start": 20.175,
+      "end": 20.494999,
+      "confidence": 0.99902344,
+      "punctuated_word": "붉게"
+    },
+    {
+      "word": "보이는",
+      "start": 20.494999,
+      "end": 20.815,
+      "confidence": 0.99902344,
+      "punctuated_word": "보이는"
     },
     {
       "word": "현상입니다",
-      "start": 18.475,
-      "end": 18.975,
-      "confidence": 0.98583984,
+      "start": 20.815,
+      "end": 21.315,
+      "confidence": 0.9748535,
       "punctuated_word": "현상입니다."
     },
     {
-      "word": "일식은",
-      "start": 19.675,
-      "end": 20.175,
-      "confidence": 0.9995117,
-      "punctuated_word": "일식은"
-    },
-    {
-      "word": "특정",
-      "start": 20.235,
-      "end": 20.555,
-      "confidence": 1,
-      "punctuated_word": "특정"
-    },
-    {
-      "word": "지역에서만",
-      "start": 20.555,
-      "end": 21.055,
-      "confidence": 0.90771484,
-      "punctuated_word": "지역에서만"
-    },
-    {
-      "word": "보이지만",
-      "start": 21.915,
-      "end": 22.154999,
-      "confidence": 0.96533203,
-      "punctuated_word": "보이지만"
-    },
-    {
-      "word": "월식은",
-      "start": 22.154999,
-      "end": 22.654999,
-      "confidence": 0.9995117,
-      "punctuated_word": "월식은"
-    },
-    {
-      "word": "지구의",
-      "start": 22.795,
-      "end": 23.275,
-      "confidence": 1,
-      "punctuated_word": "지구의"
-    },
-    {
-      "word": "밤",
-      "start": 23.275,
-      "end": 23.595,
-      "confidence": 0.99902344,
-      "punctuated_word": "밤"
-    },
-    {
-      "word": "어느",
-      "start": 23.595,
-      "end": 23.755,
-      "confidence": 0.99902344,
-      "punctuated_word": "어느"
-    },
-    {
-      "word": "곳에서나",
-      "start": 23.755,
-      "end": 24.255,
-      "confidence": 0.99316406,
-      "punctuated_word": "곳에서나"
-    },
-    {
-      "word": "관측할",
-      "start": 24.395,
-      "end": 24.875,
-      "confidence": 0.9946289,
-      "punctuated_word": "관측할"
-    },
-    {
-      "word": "수",
-      "start": 24.875,
-      "end": 25.115,
-      "confidence": 0.99609375,
-      "punctuated_word": "수"
-    },
-    {
-      "word": "있어요",
-      "start": 25.115,
-      "end": 25.615,
-      "confidence": 0.58496094,
-      "punctuated_word": "있어요."
-    },
-    {
       "word": "우주의",
-      "start": 25.755,
-      "end": 26.235,
-      "confidence": 0.9970703,
+      "start": 22.015,
+      "end": 22.515,
+      "confidence": 0.98828125,
       "punctuated_word": "우주의"
     },
     {
-      "word": "신비를",
-      "start": 26.235,
-      "end": 26.735,
+      "word": "멋진",
+      "start": 22.575,
+      "end": 22.895,
       "confidence": 1,
-      "punctuated_word": "신비를"
+      "punctuated_word": "멋진"
     },
     {
-      "word": "직접",
-      "start": 26.794998,
-      "end": 27.115,
+      "word": "그림자",
+      "start": 22.895,
+      "end": 23.395,
       "confidence": 0.9951172,
-      "punctuated_word": "직접"
+      "punctuated_word": "그림자"
     },
     {
-      "word": "눈으로",
-      "start": 27.115,
-      "end": 27.615,
-      "confidence": 1,
-      "punctuated_word": "눈으로"
+      "word": "쇼",
+      "start": 23.615,
+      "end": 24.115,
+      "confidence": 0.7368164,
+      "punctuated_word": "쇼"
     },
     {
-      "word": "확인해",
-      "start": 27.675,
-      "end": 28.075,
-      "confidence": 0.97802734,
-      "punctuated_word": "확인해"
+      "word": "정말",
+      "start": 24.255001,
+      "end": 24.654999,
+      "confidence": 0.7890625,
+      "punctuated_word": "정말"
     },
     {
-      "word": "보세요",
-      "start": 28.075,
-      "end": 28.575,
-      "confidence": 0.98828125,
-      "punctuated_word": "보세요."
+      "word": "놀랍지",
+      "start": 24.654999,
+      "end": 25.135,
+      "confidence": 0.99316406,
+      "punctuated_word": "놀랍지"
+    },
+    {
+      "word": "않나요",
+      "start": 25.135,
+      "end": 25.635,
+      "confidence": 0.59228516,
+      "punctuated_word": "않나요?"
     }
   ]
 }

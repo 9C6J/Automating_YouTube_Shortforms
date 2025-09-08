@@ -28,19 +28,22 @@ interface captionSettings {
 }
 
 const textSettings: captionSettings = {
-  fontSize: 80,
-  numSimultaneousWords: 4, // how many words are shown at most simultaneously
-  textColor: "white",
-  fontWeight: 800,
-  fontFamily: "Mulish",
-  stream: false, // if true, words appear one by one
-  textAlign: "center",
-  textBoxWidthInPercent: 70,
-  fadeInAnimation: true,
-  currentWordColor: "cyan",
-  currentWordBackgroundColor: "red", // adds a colored box to the word currently spoken
-  shadowColor: "black",
-  shadowBlur: 30
+  fontSize: 80, // 자막 글자 크기
+  numSimultaneousWords: 3, // 동시에 표시할 최대 단어 수
+  textColor: "white", // 자막 기본 글자 색상
+  fontWeight: 800, // 자막 글자 두께
+  fontFamily: "Mulish", // 자막 글꼴
+  stream: false, // true면 단어가 하나씩 순차적으로 나타남
+  textAlign: "center", // 자막 정렬(가운데 정렬)
+  textBoxWidthInPercent: 70, // 자막 박스의 너비(비율)
+  fadeInAnimation: true, // 자막이 서서히 나타나는 애니메이션 사용 여부
+  
+  //📌 수정된 코드
+  currentWordColor: "orange", // 현재 단어 강조 색상
+  currentWordBackgroundColor: "", // 현재 단어 배경 강조 색상
+  
+  shadowColor: "black", // 자막 그림자 색상
+  shadowBlur: 30 // 자막 그림자 번짐 정도
 }
 
 /**
@@ -53,19 +56,61 @@ const scene = makeScene2D('scene', function* (view) {
 
   const duration = words[words.length-1].end + 0.5;
 
+  const headerRef = createRef<Layout>();
   const imageContainer = createRef<Layout>();
   const textContainer = createRef<Layout>();
 
   yield view.add(
     <>
+      {/* 📌 수정된 코드 */}
+      {/* 메인 레이아웃 */}
       <Layout
-        size={"100%"}
-        ref={imageContainer}
-      />
-      <Layout
-        size={"100%"}
-        ref={textContainer}
-      />
+        layout
+        size={["100%", "100%"]}
+        direction={"column"}
+        gap={0}
+        padding={0}
+        justifyContent={"start"}
+        alignItems={"stretch"}
+      >
+        {/* 헤더 영역 - 25% */}
+        <Layout
+          layout
+          ref={headerRef}
+          size={["100%", "25%"]}
+          padding={0}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+        </Layout>
+        {/* 본문 영역 - 55% */}
+        <Layout
+          layout
+          ref={imageContainer}
+          size={["100%", "55%"]}
+          padding={0}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+        </Layout>
+        {/* 푸터 영역 - 20% */}
+        <Layout
+          layout
+          ref={textContainer}
+          size={["100%", "20%"]}
+          padding={0}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+        </Layout>
+        {/* 하단 여백 - 10% */}
+        <Layout
+          layout
+          size={["100%", "10%"]}
+          padding={0}
+        >
+        </Layout>
+      </Layout>
       <Audio
         src={audioUrl}
         play={true}
@@ -76,6 +121,20 @@ const scene = makeScene2D('scene', function* (view) {
         volume={0.1}
       />
     </>
+  );
+	
+  // 📌 수정된 코드
+  // 헤더에 텍스트 추가 (예시)
+  headerRef().add(
+    <Txt
+      fontSize={60} // 헤더 글자 크기
+      fontWeight={700} // 헤더 글자 두께
+      fill="white" // 헤더 글자 색상
+      textAlign="center" // 가운데 정렬
+    >
+      숏츠 제목 //📌이 곳에 원하는 숏츠 제목 입력
+
+    </Txt>
   );
 
   yield* all(
@@ -145,6 +204,8 @@ function* displayWords(container: Reference<Layout>, words: Word[], settings: ca
           </Txt>
         );
         textRef().add(<Txt fontSize={settings.fontSize}>{optionalSpace}</Txt>);
+        // 텍스트가 완전히 렌더링된 후 배경 추가
+        yield;
         container().add(<Rect fill={settings.currentWordBackgroundColor} zIndex={1} size={wordRef().size} position={wordRef().position} radius={10} padding={10} ref={backgroundRef} />);
         yield* all(waitFor(word.end-word.start), opacitySignal(1, Math.min((word.end-word.start)*0.5, 0.1)));
         wordRef().fill(settings.textColor);
@@ -192,7 +253,7 @@ function* displayWords(container: Reference<Layout>, words: Word[], settings: ca
 
       yield* all(
         opacitySignal(1, Math.min(0.1, (currentBatch[0].end-currentBatch[0].start)*0.5)),
-        highlightCurrentWord(container, currentBatch, wordRefs, settings.currentWordColor, settings.currentWordBackgroundColor),
+        highlightCurrentWordSequentially(container, currentBatch, wordRefs, settings.currentWordColor, settings.currentWordBackgroundColor),
         waitFor(currentBatch[currentBatch.length-1].end - currentBatch[0].start + waitAfter), 
       );
       textRef().remove();
@@ -201,7 +262,7 @@ function* displayWords(container: Reference<Layout>, words: Word[], settings: ca
   }
 }
 
-function* highlightCurrentWord(container: Reference<Layout>, currentBatch: Word[], wordRefs: Reference<Txt>[], wordColor: string, backgroundColor: string){
+function* highlightCurrentWordSequentially(container: Reference<Layout>, currentBatch: Word[], wordRefs: Reference<Txt>[], wordColor: string, backgroundColor: string){
   let nextWordStart = 0;
 
   for(let i = 0; i < currentBatch.length; i++){
@@ -214,6 +275,8 @@ function* highlightCurrentWord(container: Reference<Layout>, currentBatch: Word[
 
     const backgroundRef = createRef<Rect>();
     if(backgroundColor){
+      // 텍스트가 완전히 렌더링된 후 배경 추가
+      yield;
       container().add(<Rect fill={backgroundColor} zIndex={1} size={wordRefs[i]().size} position={wordRefs[i]().position} radius={10} padding={10} ref={backgroundRef} />);
     }
 
@@ -235,7 +298,7 @@ export default makeProject({
   variables: metadata,
   settings: {
     shared: {
-      size: {x: 1920, y: 1080},
+      size: {x: 1080, y: 1920},
     },
   },
 });

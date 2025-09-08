@@ -6,7 +6,8 @@
   "scripts": {
     "start": "revideo editor --projectFile ./src/project.tsx",
     "render": "tsc && node dist/render.js",
-    "get-assets": "tsc && node dist/get-assets.js"
+    "get-assets": "tsc && node dist/get-assets.js",
+    "upload-shorts": "tsx src/upload-shorts.ts"
   },
   "dependencies": {
     "@ai-sdk/perplexity": "^2.0.8",
@@ -19,14 +20,18 @@
     "axios": "^1.11.0",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "google-auth-library": "^10.3.0",
+    "googleapis": "^159.0.0",
     "openai": "^4.104.0",
     "preact": "^10.27.1",
+    "puppeteer-core": "^24.19.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@revideo/cli": "0.10.4",
     "@revideo/ui": "0.10.4",
     "@types/uuid": "^10.0.0",
+    "tsx": "^4.20.5",
     "typescript": "5.5.4",
     "vite": "^4.5"
   }
