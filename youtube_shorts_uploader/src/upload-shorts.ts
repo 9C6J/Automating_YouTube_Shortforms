@@ -32,6 +32,9 @@ interface UploadOptions {
 interface SlidesData {
   title: string;
   script?: string;
+  slides?: Array<{
+    texts: string[];
+  }>;
 }
 
 /**
@@ -280,7 +283,7 @@ async function runUploadShorts() {
         // 메타데이터 제목을 사용
         uploadOptions = {
           title: slidesData.title || 'AI Generated Shorts',
-          description: slidesData.slides.map(s => s.texts.join(' ')).join('\n\n'),
+          description: slidesData.slides?.map(s => s.texts.join(' ')).join('\n\n') || slidesData.script || '',
           shorts: true,
         };
         console.log('✅ 슬라이드 데이터 로드 완료');

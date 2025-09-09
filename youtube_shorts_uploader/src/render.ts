@@ -12,9 +12,29 @@ async function render() {
     try {
       const file = await renderVideo({
         projectFile: './src/project.tsx',
-        settings: {logProgress: true},
+        settings: {
+          viteBasePort: 9100,  
+          ffmpeg: {
+            ffmpegLogLevel: 'error',
+            ffmpegPath: 'ffmpeg',
+          },
+          logProgress: false,
+          puppeteer: {
+            headless: false,
+            args: [
+              '--no-sandbox', '--disable-setuid-sandbox'
+                //         '--disable-dev-shm-usage',
+                //         '--disable-extensions',
+                //         '--disable-gpu',
+                //         '--mute-audio',
+                // '--single-process',
+                // '--disable-background-networking',
+            ]
+          },
+
+         },
+        
       });
-      console.log(`Rendered video to ${file}`);
       return;
     } catch (err: any) {
       lastError = err;
@@ -23,6 +43,7 @@ async function render() {
       if (attempt < 3 && /Navigating frame was detached|Target closed|Navigation/.test(msg)){
         console.log('Transient browser error detected. Retrying shortly...');
         await sleep(1500 * attempt);
+
         continue;
       }
       break;

@@ -6,6 +6,7 @@ import axios from "axios";
 import * as fs from "fs";
 import { createClient } from "@deepgram/sdk";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI, Modality } from "@google/genai";
 
 const deepgram = createClient(process.env["DEEPGRAM_API_KEY"] || "");
 
@@ -68,7 +69,19 @@ async function getVoiceByName(name: string) {
 }
 
 export async function getVideoScript(videoTopic: string) {
-	const prompt = `Create a script for a youtube short. The script should be around 60 to 80 words long and be an interesting text about the provided topic, and it should start with a catchy headline, something like "Did you know that?" or "This will blow your mind". Remember that this is for a voiceover that should be read, so things like hashtags should not be included. Now write the script for the following topic: "${videoTopic}". Now return the script and nothing else, also no meta-information - ONLY THE VOICEOVER.`;
+	// const prompt = `Create a script for a youtube short. The script should be around 60 to 80 words long and be an interesting text about the provided topic, and it should start with a catchy headline, something like "Did you know that?" or "This will blow your mind". Remember that this is for a voiceover that should be read, so things like hashtags should not be included. Now write the script for the following topic: "${videoTopic}". Now return the script and nothing else, also no meta-information - ONLY THE VOICEOVER.`;
+
+	const prompt = `Create a script for a YouTube Short based on the following topic: "${videoTopic}".  
+	Please write the script in Korean
+The script should be around 60 to 80 words long, structured in 4 parts:  
+- Hook: start with a catchy line like "Did you know that?" or "This will blow your mind"  
+- Build-up: briefly introduce the story in an engaging way  
+- Climax: highlight the most shocking or exciting part  
+- Ending: finish with a twist, lesson, or fun closure + a call to action (e.g., asking viewers to like or comment)  
+
+The style should be conversational, casual, and concise, as if spoken in a friendly voiceover.  
+Return ONLY the script text, no hashtags, no meta-information.  
+`
   
 	const response = await axios.post(PERPLEXITY_API_URL, {
 		model: "sonar",
@@ -116,7 +129,7 @@ export async function getImagePromptFromScript(script: string) {
   }
 
 }
-
+	
 export async function dalleGenerate(prompt: string, savePath: string, options?: { skipPromptEnhancement?: boolean }): Promise<boolean> {
 	try {
 		if (!process.env['OPENAI_API_KEY']) {

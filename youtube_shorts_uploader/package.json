@@ -12,6 +12,7 @@
   "dependencies": {
     "@ai-sdk/perplexity": "^2.0.8",
     "@deepgram/sdk": "^3.3.1",
+    "@google/genai": "^1.17.0",
     "@google/generative-ai": "^0.24.1",
     "@preact/signals": "^2.3.1",
     "@revideo/2d": "0.10.4",
@@ -24,7 +25,6 @@
     "googleapis": "^159.0.0",
     "openai": "^4.104.0",
     "preact": "^10.27.1",
-    "puppeteer-core": "^24.19.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
